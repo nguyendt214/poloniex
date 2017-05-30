@@ -34,7 +34,7 @@ export class DashboardComponent {
       this.http.get(url)
         .map(res => res.json())
         .subscribe(data => {
-          console.log('Raw Data', data);
+          console.log('Raw Data', data.feed);
           this.data = data.feed.entry;
 
           let returnArray: Array<any> = [];
